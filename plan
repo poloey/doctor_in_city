@@ -1,0 +1,28 @@
+# Only for view
+# route
+* route for index page map > division + map
+* route for division page >  city
+* route for city page >  doctor + hospital
+* route for doctor > doctor
+* route for hospital > hospital details and all doctor inside hospital
+
+# model 
+* division
+* city
+* hospital
+* doctor
+* degree 
+* discipline
+
+
+# controller 
+* division
+* city
+* hospital
+* doctor
+* degree 
+* discipline
+
+
+
+
