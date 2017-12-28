@@ -10,11 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// all public route
+Route::get('/', 'PageController@index')->name('home');
+Route::get('/divisions/{division}', 'DivisionController@index')->name('division');
+Route::get('/cities/{city}', 'CityController@index')->name('city');
+Route::get('/hospitals/{hospital}', 'HospitalController@index')->name('hospital');
+Route::get('/doctors/{doctor}', 'DoctorController@index')->name('hospital');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+/// automatic auth
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
