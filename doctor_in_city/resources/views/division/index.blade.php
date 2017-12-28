@@ -1,18 +1,18 @@
 @extends('master')
 @section('content')
 <div class="text-center bg-info text-white p-5">
-  <h1>Dhaka Division</h1>
-  <h4>All Cities</h4>
+  <h1>{{$division->name}} Division</h1>
+  <h4>All Cities under {{$division->name}}</h4>
 </div>
 
 <div class="container">
   <div class="row">
-    @foreach([1, 2, 3, 4, 5, 6, 7, 8] as $i)
+    @foreach($division->cities as $city)
       <div class="col-md-6 col-lg-4">
-        <a href="{{ route('city', ['slug' => 'feni']) }}">
+        <a href="{{ route('city', ['slug' => $city->slug]) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
             <div class="card-header">
-              <h2>Feni</h2>
+              <h2>{{$city->name}}</h2>
             </div>
             <div class="card-body">
               <div class="d-flex justify-content-between">
@@ -20,7 +20,7 @@
                   <i class="fa fa-user-md"></i> Doctors <span class="badge badge-light">30</span>
                 </div>
                 <div>
-                  <i class="fa fa-hospital-o"></i>Hospitals <span class="badge badge-light">10</span>
+                  <i class="fa fa-hospital-o"></i> Hospitals <span class="badge badge-light">10</span>
                 </div>
               </div>
             </div>

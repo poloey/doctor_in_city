@@ -12,17 +12,7 @@ class DivisionsTableSeeder extends Seeder
      */
     public function run()
     {
-     $divisions = [
-      1 => "Barisal",
-      2 => "Chittagong",
-      3 => "Dhaka",
-      4 => "Khulna",
-      5 => "Mymensingh",
-      6 => "Rajshahi",
-      7 => "Sylhet",
-      8 => "Rangpur"
-    ];
-     foreach ($divisions as $index => $division) {
+     foreach (Helpers::DIVISIONS as $index => $division) {
        DB::table('divisions')->insert([
           'id' => $index,
           'name' => $division,
