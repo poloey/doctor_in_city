@@ -12,7 +12,7 @@ class Helpers {
   const khulna = ["Bagerhat", "Chuadanga", "Jessore", "Jhenaidah", "Khulna", "Kushtia", "Magura", "Meherpur", "Narail", "Satkhira"];
   const mymensingh = ["Jamalpur", "Mymensingh", "Netrakona", "Sherpur"];
   const rajshahi = ["Bogra", "Chapainababganj", "Joypurhat", "Pabna", "Naogaon", "Natore", "Rajshahi", "Sirajganj"];
-  const rangpur = ["Dinajpur", "Gaibandha", "Kurigram,", "Lalmonirhat", "Nilphamari", "Panchagarh", "Rangpur", "Thakurgaon"];
+  const rangpur = ["Dinajpur", "Gaibandha", "Kurigram", "Lalmonirhat", "Nilphamari", "Panchagarh", "Rangpur", "Thakurgaon"];
   const sylhet = ["Habiganj", "Maulvibazar", "Sunamganj", "Sylhet"];
   const DIVISIONS_WITH_CITY  = [
     1 => self::borisal,

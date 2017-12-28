@@ -18,4 +18,19 @@ class City extends Model
   {
       return 'slug';
   }
+  public function no_of_doctors()
+  {
+    $number_of_doctors = 0;
+    foreach ($this->hospitals as $hospital) {
+      $number_of_doctors += $hospital->doctors->count();
+    }
+    return $number_of_doctors;
+  }
+
 }
+
+//testing
+// namespace App;
+// $d = City::find(1);
+// $d->no_of_doctors();
+

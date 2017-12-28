@@ -17,10 +17,10 @@
             <div class="card-body">
               <div class="d-flex justify-content-between">
                 <div>
-                  <i class="fa fa-user-md"></i> Doctors <span class="badge badge-light">30</span>
+                  <i class="fa fa-hospital-o"></i> Hospitals <span class="badge badge-light">{{$city->hospitals->count()}}</span>
                 </div>
                 <div>
-                  <i class="fa fa-hospital-o"></i> Hospitals <span class="badge badge-light">10</span>
+                  <i class="fa fa-user-md"></i> Doctors <span class="badge badge-light">{{$city->no_of_doctors()}}</span>
                 </div>
               </div>
             </div>

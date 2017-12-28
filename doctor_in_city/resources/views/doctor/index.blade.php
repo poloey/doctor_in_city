@@ -1,31 +1,34 @@
 @extends('master')
 @section('content')
 <div class="text-center bg-info text-white p-5">
-  <h1>Sumon Ahmed</h1>
-  <h2>Heart Specialist</h2>
+  <h1>
+    <a class="text-white" href="{{ route('hospital', ['slug' => $doctor->hospital->slug]) }}"> <i class="fa fa-arrow-left"></i> </a>
+    {{$doctor->name}}
+  </h1>
+  <h2>{{$doctor->discipline->name}}</h2>
 </div>
 
 <div class="container">
   <div class="row">
       <div class="col-md-6 col-lg-6 m-auto">
-          <div class="card my-3 text-white bg_random_color hover_random_color">
+          <div class="card my-3 text-white bg_random_color">
             <div class="card-body">
               <div class="text-center">
-                <img src="{{ asset('image/people/1.jpg') }}" class="radius-rounded mb-3" alt="">
+                <img class="rounded-circle my-3" src="{{ asset('image/people/' . intval($doctor->id % 99) .'.jpg') }}" alt="">
                 <div>
-                  Name: Sumon Ahmed
+                  Name: {{$doctor->name}}
                 </div>
                 <div>
-                  Email: sumon@gmail.com
+                  Email: {{$doctor->email}}
                 </div>
                 <div>
-                  contact: 43248320482
+                  contact: {{$doctor->phone}}
                 </div>
                 <div>
-                  Hospital: Haider Medical
+                  Hospital: {{$doctor->hospital->name}}
                 </div>
                 <div>
-                  <i class="fa fa-user-md"></i> Heart Specialist - Mbbs
+                  <i class="fa fa-user-md"></i> {{$doctor->discipline->name }} - {{$doctor->degree->name}}
                 </div>
               </div>
             </div>

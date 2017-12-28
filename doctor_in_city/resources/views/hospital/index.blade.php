@@ -1,22 +1,29 @@
 @extends('master')
 @section('content')
 <div class="text-center bg-info text-white p-5">
-  <h1>Haider Medical</h1>
+  <h1>
+    <a class="text-white" href="{{ route('city', ['slug' => $hospital->city->slug]) }}"> <i class="fa fa-arrow-left"></i> </a>
+    {{$hospital->name}} City
+  </h1>
   <h4>All Doctors</h4>
 </div>
 <div class="container">
   <div class="row">
-    @foreach([1, 2, 3, 4, 5, 6, 7, 8] as $i)
+    @foreach($hospital->doctors as $doctor)
       <div class="col-md-6 col-lg-4">
-        <a href="{{ route('doctor', ['slug' => 'sumon-ahmed']) }}">
+        <a href="{{ route('doctor', ['slug' => $doctor->slug]) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
             <div class="card-header">
-              <h2>Sumon Ahmed</h2>
+              <h2>{{$doctor->name}}</h2>
             </div>
             <div class="card-body">
-              <div class="d-flex justify-content-center">
-                <div>
-                  <i class="fa fa-user-md"></i> Heart Specialist - MBBS
+              <div class="text-center">
+                <div class="mb-3">
+                  <img class="rounded-circle" src="{{ asset('image/people/' . intval($doctor->id % 99) .'.jpg') }}" alt="">
+                </div>
+                <div></div>
+                <div class="d-inline-block">
+                  <i class="fa fa-user-md"></i> {{$doctor->discipline->name}} - {{$doctor->degree->name}}
                 </div>
               </div>
             </div>
