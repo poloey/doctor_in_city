@@ -9,7 +9,7 @@
   <div class="row">
     @foreach([1, 2, 3, 4, 5, 6, 7, 8] as $i)
       <div class="col-md-6 col-lg-4">
-        <a href="{{ route('city', ['id' => 1]) }}">
+        <a href="{{ route('city', ['slug' => 'feni']) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
             <div class="card-header">
               <h2>Feni</h2>
@@ -17,10 +17,10 @@
             <div class="card-body">
               <div class="d-flex justify-content-between">
                 <div>
-                  30 <i class="fa fa-user-md"></i> Doctors 
+                  <i class="fa fa-user-md"></i> Doctors <span class="badge badge-light">30</span>
                 </div>
                 <div>
-                  10 <i class="fa fa-hospital-o"></i> Hospitals 
+                  <i class="fa fa-hospital-o"></i>Hospitals <span class="badge badge-light">10</span>
                 </div>
               </div>
             </div>

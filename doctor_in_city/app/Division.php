@@ -10,8 +10,4 @@ class Division extends Model
   public function cities () {
     return $this->hasMany(City::class);
   }
-  public function getRouteKeyName()
-  {
-      return 'slug';
-  }
 }

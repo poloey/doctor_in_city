@@ -18,6 +18,7 @@ class CreateHospitalsTable extends Migration
             $table->string('slug')->unique();
             $table->string('name');
             $table->text('address')->nullable();
+            $table->string('phone')->default(12345678);
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
             $table->timestamps();

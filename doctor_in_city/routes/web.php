@@ -15,7 +15,7 @@ Route::get('/', 'PageController@index')->name('home');
 Route::get('/divisions/{division}', 'DivisionController@index')->name('division');
 Route::get('/cities/{city}', 'CityController@index')->name('city');
 Route::get('/hospitals/{hospital}', 'HospitalController@index')->name('hospital');
-Route::get('/doctors/{doctor}', 'DoctorController@index')->name('hospital');
+Route::get('/doctors/{doctor}', 'DoctorController@index')->name('doctor');
 
 
 /// automatic auth

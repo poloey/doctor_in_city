@@ -1,0 +1,99 @@
+# division 
+Barisal
+Chittagong
+Dhaka
+Khulna
+Mymensingh
+Rajshahi
+Sylhet
+Rangpur
+ 
+
+# district 
+
+Barisal Division
+Barguna
+Barisal
+Bhola
+Jhalokati
+Patuakhali
+Pirojpur 
+
+Chittagong Division
+Bandarban
+Brahmanbaria
+Chandpur
+Chittagong
+Comilla
+Cox's bazar
+Feni
+Khagrachhari
+Lakshmipur
+Noakhali
+Rangamati 
+
+Dhaka Division
+
+DHAKA
+FARIDPUR
+GAZIPUR
+GOPALGANJ
+JAMALPUR
+KISHOREGONJ
+MADARIPUR
+MANIKGANJ
+MUNSHIGANJ
+MYMENSINGH
+NARAYANGANJ
+NARSINGDI
+NETRAKONA
+RAJBARI
+SHARIATPUR
+SHERPUR
+TANGAIL
+
+
+ 
+
+  
+Khulna Division
+
+BAGERHAT
+CHUADANGA
+JESSORE
+JHENAIDAH
+KHULNA
+KUSHTIA
+MAGURA
+MEHERPUR
+NARAIL
+SATKHIRA
+
+Rajshahi Division
+
+BOGRA
+CHAPAINABABGANJ
+JOYPURHAT
+PABNA
+NAOGAON
+NATORE
+RAJSHAHI
+SIRAJGANJ
+
+Rangpur Division
+
+DINAJPUR
+GAIBANDHA
+KURIGRAM,
+LALMONIRHAT
+NILPHAMARI
+PANCHAGARH
+RANGPUR
+THAKURGAON
+
+Sylhet Division
+
+HABIGANJ
+MAULVIBAZAR
+SUNAMGANJ
+SYLHET

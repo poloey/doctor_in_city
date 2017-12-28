@@ -18,7 +18,7 @@ class CreateDoctorsTable extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('email');
-            $table->string('phone');
+            $table->string('phone')->default(987654321);
             $table->text('address')->nullable();
 
             $table->integer('hospital_id')->unsigned();

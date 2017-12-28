@@ -7,7 +7,7 @@
         <div class="form-group">
           <div class="input-group">
             <input type="text" class="form-control" name="query" placeholder="search city, hospital, doctor.......">
-            <button type="submit" class="input-group-addon">Search</button>
+            <button type="submit" style="cursor: pointer;" class="input-group-addon"> <i class="fa fa-search"></i> </button>
           </div>
         </div>
       </form>
