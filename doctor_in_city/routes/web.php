@@ -19,6 +19,7 @@ Route::get('/doctors', 'DoctorController@index')->name('doctor.index');
 Route::get('/doctors/{doctor}', 'DoctorController@show')->name('doctor.show');
 Route::get('/disciplines', 'DisciplineController@index')->name('discipline.index');
 Route::get('/disciplines/{discipline}', 'DisciplineController@show')->name('discipline.show');
+Route::get('/search', 'PageController@search')->name('search');
 
 
 /// automatic auth

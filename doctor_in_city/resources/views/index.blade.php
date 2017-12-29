@@ -3,7 +3,7 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col-md-6 m-auto">
-      <form action="">
+      <form action="{{ asset('search') }}">
         <div class="form-group">
           <div class="input-group">
             <input type="text" class="form-control" name="query" placeholder="search city, hospital, doctor.......">
