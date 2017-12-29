@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
 <div class="text-center bg-info text-white p-5">
-  <h1> <i class="fa fa-user-md"></i> All Doctors</h1>
+  <h1> <i class="fa fa-user-md"></i> All Doctors  <span class="badge badge-light"> {{$doctors->total() }}</span></h1>
 </div>
 <div class="container">
   <div class="d-flex flex-wrap">
