@@ -6,23 +6,29 @@
       <form action="{{ asset('search') }}">
         <div class="form-group">
           <div class="input-group">
-            <input type="text" class="form-control" name="query" placeholder="search city, hospital, doctor.......">
+            <input type="text" class="form-control" value="{{$query}}" name="query" placeholder="search city, hospital, doctor.......">
             <button type="submit" style="cursor: pointer;" class="input-group-addon"> <i class="fa fa-search"></i> </button>
           </div>
         </div>
       </form>
     </div>
   </div>
-  <div class="bg-info text-light p-3 text-center">
-    <h2>Search Results for <span>{{$query}}</span></h2>
-  </div>
+</div>
 
+  @if (!count($cities) && !count($hospitals) && !count($doctors))
+  <div class="container">
+    <h2 class="my-5">No cities, doctors, hospitals found for your query</h2>
+  </div>
+  @endif
+
+  @if (count($cities))
   <div class="bg_random_color text-light p-3 mt-3 container">
-    Search result for city
+    Search results for city
   </div>
+  @endif
 
-  <div class="d-flex flex-wrap">
-    @forelse($cities as $city )
+  <div class="d-flex container flex-wrap">
+    @foreach($cities as $city )
       <div class="col-md-6 col-lg-4">
         <a href="{{ route('city.show', ['slug' => $city->slug]) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
@@ -42,17 +48,17 @@
           </div>
         </a>
       </div>
-    @empty
-    <h2>No city found</h2>
-    @endforelse
+    @endforeach
   </div> 
 
 
+  @if (count($hospitals))
   <div class="container bg_random_color text-light p-3 mt-3">
-    Search result for Hospital
+    Search results for Hospital
   </div>
-  <div class="d-flex flex-wrap">
-    @forelse($hospitals as $hospital )
+  @endif
+  <div class="d-flex container flex-wrap">
+    @foreach($hospitals as $hospital )
       <div class="col-md-6 col-lg-4">
         <a href="{{ route('hospital.show', ['slug' => $hospital->slug]) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
@@ -69,16 +75,16 @@
           </div>
         </a>
       </div>
-    @empty
-    <h2>No Hospital found</h2>
-    @endforelse
+    @endforeach
   </div> 
 
+  @if(count($doctors))
   <div class="container bg_random_color text-light p-3 mt-3">
-    Search result for Doctor
+    Search results for Doctor
   </div>
-  <div class="d-flex flex-wrap">
-    @forelse($doctors as $doctor )
+  @endif
+  <div class="container d-flex flex-wrap">
+    @foreach($doctors as $doctor )
       <div class="col-md-6 col-lg-4">
         <a href="{{ route('doctor.show', ['slug' => $doctor->slug]) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
@@ -99,9 +105,7 @@
           </div>
         </a>
       </div>
-    @empty
-    <h2>No Doctor found</h2>
-    @endforelse
+    @endforeach
   </div> 
 
 
