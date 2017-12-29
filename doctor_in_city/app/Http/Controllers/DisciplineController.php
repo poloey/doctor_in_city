@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Discipline;
 
 class DisciplineController extends Controller
 {
@@ -23,7 +24,7 @@ class DisciplineController extends Controller
    */
   public function show($slug)
   {
-    $division = Discipline::where('slug', $slug)->first();
-    return view('discipline.show', compact('division'));
+    $discipline = Discipline::where('slug', $slug)->first();
+    return view('discipline.show', compact('discipline'));
   }
 }

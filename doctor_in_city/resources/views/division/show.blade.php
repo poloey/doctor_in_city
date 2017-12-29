@@ -6,7 +6,7 @@
 </div>
 
 <div class="container">
-  <div class="row">
+  <div class="d-flex flex-wrap">
     @foreach($division->cities as $city)
       <div class="col-md-6 col-lg-4">
         <a href="{{ route('city.show', ['slug' => $city->slug]) }}">

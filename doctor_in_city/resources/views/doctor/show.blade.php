@@ -9,7 +9,7 @@
 </div>
 
 <div class="container">
-  <div class="row">
+  <div class="d-flex flex-wrap">
       <div class="col-md-6 col-lg-6 m-auto">
           <div class="card my-3 text-white bg_random_color">
             <div class="card-body">

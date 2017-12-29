@@ -2,14 +2,14 @@
 @section('content')
 <div class="text-center bg-info text-white p-5">
   <h1>
-    <a class="text-white" href="{{ route('city.show', ['slug' => $hospital->city->slug]) }}"> <i class="fa fa-arrow-left"></i> </a>
-    {{$hospital->name}} City
+    <a class="text-white" href="{{ route('discipline.index') }}"> <i class="fa fa-arrow-left"></i> </a>
+    {{$discipline->name}}
   </h1>
-  <h4>All Doctors</h4>
+  <h4>All Doctors in {{$discipline->name}} Department</h4>
 </div>
 <div class="container">
   <div class="d-flex flex-wrap">
-    @foreach($hospital->doctors as $doctor)
+    @foreach($discipline->doctors as $doctor)
       <div class="col-md-6 col-lg-4">
         <a href="{{ route('doctor.show', ['slug' => $doctor->slug]) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
