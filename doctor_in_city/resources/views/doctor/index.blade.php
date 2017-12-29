@@ -1,11 +1,7 @@
 @extends('master')
 @section('content')
 <div class="text-center bg-info text-white p-5">
-  <h1>
-    <a class="text-white" href="{{ route('discipline.index') }}"> <i class="fa fa-arrow-left"></i> </a>
-    {{$discipline->name}}
-  </h1>
-  <h4>All Doctors in {{$discipline->name}} Department</h4>
+  <h1> <i class="fa fa-user-md"></i> All Doctors</h1>
 </div>
 <div class="container">
   <div class="d-flex flex-wrap">

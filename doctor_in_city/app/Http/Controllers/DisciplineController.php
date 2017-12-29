@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Discipline;
+use App\Doctor;
 
 class DisciplineController extends Controller
 {
@@ -25,6 +26,7 @@ class DisciplineController extends Controller
   public function show($slug)
   {
     $discipline = Discipline::where('slug', $slug)->first();
-    return view('discipline.show', compact('discipline'));
+    $doctors = Doctor::where('discipline_id', $discipline->id)->paginate(18);
+    return view('discipline.show', compact('discipline', 'doctors'));
   }
 }

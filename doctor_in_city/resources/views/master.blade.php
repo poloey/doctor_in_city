@@ -15,7 +15,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{{ route('home') }}">Doctor In City</a>
+    <a class="navbar-brand" href="{{ route('home') }}"> <i class="fa fa-user-md"></i> Doctor In City</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,6 +26,9 @@
         </li>
         <li class="nav-item {{ Request::is('disciplines') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('discipline.index') }}">All Discipline</a>
+        </li>
+        <li class="nav-item {{ Request::is('doctors') ? 'active' : '' }}">
+          <a class="nav-link" href="{{ route('doctor.index') }}">All Doctors</a>
         </li>
       </ul>
     </div>
