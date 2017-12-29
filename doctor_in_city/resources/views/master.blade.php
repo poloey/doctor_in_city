@@ -21,10 +21,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('home') }}">Home </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item {{ Request::is('disciplines') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('discipline.index') }}">All Discipline</a>
         </li>
       </ul>
