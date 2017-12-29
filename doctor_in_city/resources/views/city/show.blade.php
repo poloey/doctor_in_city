@@ -2,7 +2,7 @@
 @section('content')
 <div class="text-center bg-info text-white p-5">
   <h1>
-    <a class="text-white" href="{{ route('division', ['slug' => $city->division->slug]) }}"> <i class="fa fa-arrow-left"></i> </a>{{$city->name}} City</h1>
+    <a class="text-white" href="{{ route('division.show', ['slug' => $city->division->slug]) }}"> <i class="fa fa-arrow-left"></i> </a>{{$city->name}} City</h1>
   <h4>All Hospitals</h4>
 </div>
 
@@ -10,7 +10,7 @@
   <div class="row">
     @foreach($city->hospitals as $hospital)
       <div class="col-md-6 col-lg-4">
-        <a href="{{ route('hospital', ['slug' => $hospital->slug]) }}">
+        <a href="{{ route('hospital.show', ['slug' => $hospital->slug]) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
             <div class="card-header">
               <h4 class="text-center">{{$hospital->name}}</h4>

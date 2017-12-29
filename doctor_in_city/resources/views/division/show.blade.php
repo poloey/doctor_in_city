@@ -9,7 +9,7 @@
   <div class="row">
     @foreach($division->cities as $city)
       <div class="col-md-6 col-lg-4">
-        <a href="{{ route('city', ['slug' => $city->slug]) }}">
+        <a href="{{ route('city.show', ['slug' => $city->slug]) }}">
           <div class="card my-3 text-white bg_random_color hover_random_color">
             <div class="card-header">
               <h2>{{$city->name}}</h2>

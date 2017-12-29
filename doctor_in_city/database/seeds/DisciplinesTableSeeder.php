@@ -16,6 +16,7 @@ class DisciplinesTableSeeder extends Seeder
       foreach (Helpers::DISCIPLINES as $discipline) {
         DB::table('disciplines')->insert([
           'name' => $discipline,
+          'slug' => str_slug($discipline),
           'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
           'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);

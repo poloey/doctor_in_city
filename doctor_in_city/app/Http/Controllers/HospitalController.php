@@ -7,9 +7,9 @@ use App\Hospital;
 
 class HospitalController extends Controller
 {
-  public function index($slug)
+  public function show($slug)
   {
     $hospital = Hospital::where('slug', $slug)->first();
-    return view('hospital.index', compact('hospital'));
+    return view('hospital.show', compact('hospital'));
   }
 }

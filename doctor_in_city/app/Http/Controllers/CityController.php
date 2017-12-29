@@ -7,9 +7,9 @@ use App\City;
 
 class CityController extends Controller
 {
-  public function index($slug)
+  public function show($slug)
   {
     $city = City::where('slug', $slug)->first();
-    return view('city.index', compact('city'));
+    return view('city.show', compact('city'));
   }
 }

@@ -7,9 +7,9 @@ use App\Division;
 
 class DivisionController extends Controller
 {
-  public function index($slug)
+  public function show($slug)
   {
     $division = Division::where('slug', $slug)->first();
-    return view('division.index', compact('division'));
+    return view('division.show', compact('division'));
   }
 }

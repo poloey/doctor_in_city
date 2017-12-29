@@ -7,9 +7,9 @@ use App\Doctor;
 
 class DoctorController extends Controller
 {
-  public function index($slug)
+  public function show($slug)
   {
     $doctor = Doctor::where('slug', $slug)->first();
-    return view('doctor.index', compact('doctor'));
+    return view('doctor.show', compact('doctor'));
   }
 }

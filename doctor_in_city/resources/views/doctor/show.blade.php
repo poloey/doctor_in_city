@@ -2,7 +2,7 @@
 @section('content')
 <div class="text-center bg-info text-white p-5">
   <h1>
-    <a class="text-white" href="{{ route('hospital', ['slug' => $doctor->hospital->slug]) }}"> <i class="fa fa-arrow-left"></i> </a>
+    <a class="text-white" href="{{ route('hospital.show', ['slug' => $doctor->hospital->slug]) }}"> <i class="fa fa-arrow-left"></i> </a>
     {{$doctor->name}}
   </h1>
   <h2>{{$doctor->discipline->name}}</h2>
