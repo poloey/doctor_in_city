@@ -26,6 +26,7 @@ class DoctorsTableSeeder extends Seeder
           'hospital_id' => rand(1, Helpers::NUMBER_OF_HOSPITAL),
           'degree_id' => rand(1, count(Helpers::DEGREES)),
           'discipline_id' => rand(1, count(Helpers::DISCIPLINES)),
+          'user_id' => rand(1, count(Helpers::USERS)),
           'phone' => $faker->tollFreePhoneNumber,
           'address' => $faker->address,
           'created_at' => Carbon::now()->format('Y-m-d H:i:s'),

@@ -24,10 +24,12 @@ class CreateDoctorsTable extends Migration
             $table->integer('hospital_id')->unsigned();
             $table->integer('degree_id')->unsigned();
             $table->integer('discipline_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
             $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade');
             $table->foreign('degree_id')->references('id')->on('degrees')->onDelete('cascade');
             $table->foreign('discipline_id')->references('id')->on('disciplines')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

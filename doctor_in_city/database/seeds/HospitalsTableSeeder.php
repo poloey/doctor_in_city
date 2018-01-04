@@ -21,6 +21,7 @@ class HospitalsTableSeeder extends Seeder
           'name' => $company . ' Hospital',
           'slug' => $this->generating_slug($company),
           'city_id' => rand(1, Helpers::NUMBER_OF_CITY),
+          'user_id' => rand(1, count(Helpers::USERS)),
           'phone' => $faker->tollFreePhoneNumber,
           'address' => $faker->address,
           'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
