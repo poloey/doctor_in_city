@@ -21,6 +21,13 @@ Route::get('/disciplines', 'DisciplineController@index')->name('discipline.index
 Route::get('/disciplines/{discipline}', 'DisciplineController@show')->name('discipline.show');
 Route::get('/search', 'PageController@search')->name('search');
 
+// dashboard
+Route::get('/dashboard', [
+  'as' => 'dashboard.index',
+  'uses' => 'DashboardController@index'
+]);
+
+
 
 /// automatic auth
 
